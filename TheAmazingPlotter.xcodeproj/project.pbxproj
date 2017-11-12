@@ -12,7 +12,8 @@
 		423981131FB771A20076821C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423981111FB771A20076821C /* Main.storyboard */; };
 		423981151FB771A20076821C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423981141FB771A20076821C /* Assets.xcassets */; };
 		423981181FB771A20076821C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423981161FB771A20076821C /* LaunchScreen.storyboard */; };
-		423981231FB771A20076821C /* TheAmazingPlotterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423981221FB771A20076821C /* TheAmazingPlotterTests.swift */; };
+		4239812E1FB861EF0076821C /* BezierBuildingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239812D1FB861EF0076821C /* BezierBuildingTests.swift */; };
+		423981311FB862760076821C /* Bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423981301FB862760076821C /* Bezier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,9 @@
 		423981171FB771A20076821C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		423981191FB771A20076821C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4239811E1FB771A20076821C /* TheAmazingPlotterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheAmazingPlotterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		423981221FB771A20076821C /* TheAmazingPlotterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheAmazingPlotterTests.swift; sourceTree = "<group>"; };
 		423981241FB771A20076821C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4239812D1FB861EF0076821C /* BezierBuildingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierBuildingTests.swift; sourceTree = "<group>"; };
+		423981301FB862760076821C /* Bezier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		4239810C1FB771A20076821C /* TheAmazingPlotter */ = {
 			isa = PBXGroup;
 			children = (
+				4239812F1FB862670076821C /* Model */,
 				4239810D1FB771A20076821C /* AppDelegate.swift */,
 				4239810F1FB771A20076821C /* ViewController.swift */,
 				423981111FB771A20076821C /* Main.storyboard */,
@@ -90,10 +93,18 @@
 		423981211FB771A20076821C /* TheAmazingPlotterTests */ = {
 			isa = PBXGroup;
 			children = (
-				423981221FB771A20076821C /* TheAmazingPlotterTests.swift */,
 				423981241FB771A20076821C /* Info.plist */,
+				4239812D1FB861EF0076821C /* BezierBuildingTests.swift */,
 			);
 			path = TheAmazingPlotterTests;
+			sourceTree = "<group>";
+		};
+		4239812F1FB862670076821C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				423981301FB862760076821C /* Bezier.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,6 +161,7 @@
 					};
 					4239811D1FB771A20076821C = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 423981091FB771A20076821C;
 					};
@@ -199,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				423981311FB862760076821C /* Bezier.swift in Sources */,
 				423981101FB771A20076821C /* ViewController.swift in Sources */,
 				4239810E1FB771A20076821C /* AppDelegate.swift in Sources */,
 			);
@@ -208,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423981231FB771A20076821C /* TheAmazingPlotterTests.swift in Sources */,
+				4239812E1FB861EF0076821C /* BezierBuildingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +373,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.massimo.temp.TheAmazingPlotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -375,7 +388,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.massimo.temp.TheAmazingPlotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -384,12 +397,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7S7Q438LZ;
 				INFOPLIST_FILE = TheAmazingPlotterTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.massimo.temp.TheAmazingPlotterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TheAmazingPlotter.app/TheAmazingPlotter";
@@ -401,6 +416,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y7S7Q438LZ;
 				INFOPLIST_FILE = TheAmazingPlotterTests/Info.plist;
