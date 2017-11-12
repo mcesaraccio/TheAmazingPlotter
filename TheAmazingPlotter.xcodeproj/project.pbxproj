@@ -12,8 +12,6 @@
 		423981131FB771A20076821C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423981111FB771A20076821C /* Main.storyboard */; };
 		423981151FB771A20076821C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423981141FB771A20076821C /* Assets.xcassets */; };
 		423981181FB771A20076821C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 423981161FB771A20076821C /* LaunchScreen.storyboard */; };
-		4239812E1FB861EF0076821C /* BezierBuildingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239812D1FB861EF0076821C /* BezierBuildingTests.swift */; };
-		423981311FB862760076821C /* Bezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423981301FB862760076821C /* Bezier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +34,6 @@
 		423981191FB771A20076821C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4239811E1FB771A20076821C /* TheAmazingPlotterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheAmazingPlotterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		423981241FB771A20076821C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4239812D1FB861EF0076821C /* BezierBuildingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierBuildingTests.swift; sourceTree = "<group>"; };
-		423981301FB862760076821C /* Bezier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bezier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +75,6 @@
 		4239810C1FB771A20076821C /* TheAmazingPlotter */ = {
 			isa = PBXGroup;
 			children = (
-				4239812F1FB862670076821C /* Model */,
 				4239810D1FB771A20076821C /* AppDelegate.swift */,
 				4239810F1FB771A20076821C /* ViewController.swift */,
 				423981111FB771A20076821C /* Main.storyboard */,
@@ -94,17 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				423981241FB771A20076821C /* Info.plist */,
-				4239812D1FB861EF0076821C /* BezierBuildingTests.swift */,
 			);
 			path = TheAmazingPlotterTests;
-			sourceTree = "<group>";
-		};
-		4239812F1FB862670076821C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				423981301FB862760076821C /* Bezier.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +197,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				423981311FB862760076821C /* Bezier.swift in Sources */,
 				423981101FB771A20076821C /* ViewController.swift in Sources */,
 				4239810E1FB771A20076821C /* AppDelegate.swift in Sources */,
 			);
@@ -221,7 +206,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4239812E1FB861EF0076821C /* BezierBuildingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
